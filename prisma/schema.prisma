@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model OnlineAuctionVrmData {
+  id          Int     @id @default(autoincrement())
+  vrm         String  @db.VarChar(6) @map("VRM")
+  price       Int     @map("PRICE")
+  noBitsFlat  Boolean @default(false) @map("NO_BITS_FLAT")
+  sessionNo   Int     @map("SESSION_NO")
+
+  @@map("online_auction_vrm_data")
+}
