@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Home() {
   const [plate, setPlate] = useState("");
@@ -16,16 +17,26 @@ export default function Home() {
       return;
     }
     setError(null);
+
     router.push(`/results?plate=${encodeURIComponent(trimmed)}`);
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-zinc-50 font-sans dark:bg-black">
-      <header className="w-full py-4">
-        <div className="mx-auto max-w-xl text-center">
+      <header className="w-full py-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/offical logo white.png"
+              alt="HKVRMAD Logo"
+              width={400}
+              height={150}
+              className="h-auto w-auto max-w-sm"
+            />
+          </div>
             <p className="text-4xl font-semibold text-black dark:text-zinc-50">香港車牌拍賣資料庫</p>
             <p className="mt-2 text-2xl text-zinc-600 dark:text-zinc-400">Hong Kong Vehicle Registration Mark Auction Database</p>
-            <p className="mt-4 text-sm text-red-500 dark:text-red-500">目前只包含所有《拍牌易》的網上拍賣記錄，未來將持續更新更多資料。</p>
+            <p className="mt-4 text-sm text-red-500 dark:text-blue-500">目前只包含所有《拍牌易》的網上拍賣記錄，未來將持續更新更多資料。</p>
         </div>
       </header>
 

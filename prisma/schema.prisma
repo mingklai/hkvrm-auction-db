@@ -16,3 +16,11 @@ model OnlineAuctionVrmData {
 
   @@map("online_auction_vrm_data")
 }
+
+model OnlineAuctionVrmSearchingLog {
+  id       Int      @id @default(autoincrement())
+  vrm      String   @db.VarChar(10) @map("VRM")
+  datetime DateTime @default(now()) @map("DATETIME")
+
+  @@map("online_auction_vrm_searching_log")
+}

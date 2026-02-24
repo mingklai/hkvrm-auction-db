@@ -83,6 +83,28 @@ export default function Results() {
           <div className="mt-6 flex gap-3">
             <Link href="/" className="rounded-md border border-zinc-200 px-4 py-3 hover:bg-zinc-50 dark:border-zinc-700">回到查詢</Link>
           </div>
+
+          {/* 車牌範例 */}
+          <div className="mt-10 border-t border-zinc-200 dark:border-zinc-700 pt-6">
+            <p className="mb-4 text-center text-sm font-medium text-zinc-700 dark:text-zinc-300">車牌範例</p>
+            <div className="flex flex-col gap-4">
+              {/* 白底車牌 */}
+              <div className="flex items-center justify-center">
+                <div className="relative w-60 h-16 bg-white border-4 border-black rounded-md shadow-md flex items-center justify-center px-2">
+                  {/* 車牌號碼 */}
+                  <div className="font-mono text-4xl font-bold text-black tracking-widest">{plate}</div>
+                </div>
+              </div>
+
+              {/* 黃底車牌 */}
+              <div className="flex items-center justify-center">
+                <div className="relative w-60 h-16 bg-yellow-300 border-4 border-black rounded-md shadow-md flex items-center justify-center px-2">
+                  {/* 車牌號碼 */}
+                  <div className="font-mono text-4xl font-bold text-black tracking-widest">{plate}</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
