@@ -96,7 +96,9 @@ export default function ResultsClient({ initialPlate }: { initialPlate: string }
               <div className="flex items-center justify-center">
                 <div className="relative w-60 h-16 bg-white border-4 border-black rounded-md shadow-md flex items-center justify-center px-2">
                   {/* 車牌號碼 */}
-                  <div className="font-mono text-4xl font-bold text-black tracking-widest">{plate}</div>
+                  <div className="hk-plate-font text-4xl font-bold text-black">
+                    {plate}
+                  </div>
                 </div>
               </div>
 
@@ -104,7 +106,9 @@ export default function ResultsClient({ initialPlate }: { initialPlate: string }
               <div className="flex items-center justify-center">
                 <div className="relative w-60 h-16 bg-yellow-300 border-4 border-black rounded-md shadow-md flex items-center justify-center px-2">
                   {/* 車牌號碼 */}
-                  <div className="font-mono text-4xl font-bold text-black tracking-widest">{plate}</div>
+                  <div className="hk-plate-font text-4xl font-bold text-black">
+                    {plate}
+                  </div>
                 </div>
               </div>
             </div>
